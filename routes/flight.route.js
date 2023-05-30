@@ -66,7 +66,7 @@ flightRoute.patch('/flights/:id', async (req, res) => {
     }
 })
 
-flightRoute.delete('flights/:id', async (req, res) => {
+flightRoute.delete('/flights/:id', async (req, res) => {
     try {
         const id = req.params.id;
         await FlightModel.findByIdAndDelete({ _id: id });
